@@ -1,0 +1,139 @@
+﻿<Declaration
+    xsi:schemaLocation='urn:wco:datamodel:WCO:GoodsDeclaration:1 GoodsDeclaration_1p0_DUE.xsd'
+    xmlns:ds='urn:wco:datamodel:WCO:GoodsDeclaration_DS:1'
+    xmlns='urn:wco:datamodel:WCO:GoodsDeclaration:1'
+    xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'>
+  <DeclarationNFe>
+    <ID/>
+    <DeclarationOffice>
+      <ID listID='token'>817800</ID>
+      <Warehouse>
+        <ID>8932741</ID>
+        <TypeCode>281</TypeCode>
+        <LatitudeMeasure></LatitudeMeasure>
+        <LongitudeMeasure></LongitudeMeasure>
+        <Address>
+          <Line></Line>
+        </Address>
+      </Warehouse>
+    </DeclarationOffice>
+    <AdditionalInformation>
+      <StatementCode>1001</StatementCode>
+      <StatementTypeCode>CUS</StatementTypeCode>
+    </AdditionalInformation>
+    <AdditionalInformation>
+      <StatementTypeCode>DEF</StatementTypeCode>
+      <StatementDescription>Vinculo de notas fiscais</StatementDescription>
+    </AdditionalInformation>
+    <AdditionalInformation>
+      <StatementDescription languageID=''>BKG.: 8018096800</StatementDescription>
+      <LimitDateTime>10</LimitDateTime>
+      <StatementTypeCode>AAI</StatementTypeCode>
+    </AdditionalInformation>
+    <CurrencyExchange>
+      <CurrencyTypeCode>USD</CurrencyTypeCode>
+    </CurrencyExchange>
+    <Declarant>
+      <ID schemeID='token'>00831373000104</ID>
+    </Declarant>
+    <ExitOffice>
+      <ID>817800</ID>
+      <Warehouse>
+        <ID>8931312</ID>
+        <TypeCode>281</TypeCode>
+      </Warehouse>
+    </ExitOffice>
+    <GoodsShipment>
+      <Exporter>
+        <Name languageID=''></Name>
+        <ID schemeID='token'></ID>
+        <Address>
+          <CountryCode>BR</CountryCode>
+          <CountrySubDivisionCode>BR-</CountrySubDivisionCode>
+          <Line languageID=''></Line>
+        </Address>
+      </Exporter>
+      <GovernmentAgencyGoodsItem>
+        <CustomsValueAmount languageID=''>48235.5000</CustomsValueAmount>
+        <SequenceNumeric>1</SequenceNumeric>
+        <Destination>
+          <CountryCode>HK</CountryCode>
+          <GoodsMeasure>
+            <TariffQuantity>24300.0000</TariffQuantity>
+          </GoodsMeasure>
+        </Destination>
+        <AdditionalInformation>
+          <StatementDescription languageID=''></StatementDescription>
+          <LimitDateTime>0</LimitDateTime>
+          <StatementTypeCode>PRI</StatementTypeCode>
+        </AdditionalInformation>
+        <Commodity>
+          <Description></Description>
+          <ValueAmount schemeID='token'>48235.5000</ValueAmount>
+          <CommercialDescription languageID=''></CommercialDescription>
+          <Classification>
+            <ID schemeID='token'>20091100</ID>
+            <IdentificationTypeCode>HS</IdentificationTypeCode>
+          </Classification>
+          <GoodsMeasure>
+            <TypeCode>AAF</TypeCode>
+            <TariffQuantity unitCode=''>24300.0000</TariffQuantity>
+          </GoodsMeasure>
+          <GoodsMeasure>
+            <UnitDescription languageID=''>KG</UnitDescription>
+            <TypeCode>ABW</TypeCode>
+            <TariffQuantity unitCode=''>24300.0000</TariffQuantity>
+          </GoodsMeasure>
+          <Product>
+            <ID schemeID='token'>0</ID>
+            <IdentifierTypeCode>VN</IdentifierTypeCode>
+          </Product>
+          <InvoiceLine>
+            <SequenceNumeric>1</SequenceNumeric>
+            <ReferencedInvoiceLine>
+              <SequenceNumeric>1</SequenceNumeric>
+              <InvoiceIdentificationID schemeID='token'>35180700831373000295550090001030101426610668</InvoiceIdentificationID>
+              <GoodsMeasure>
+                <TariffQuantity unitCode=''>24300.0000</TariffQuantity>
+              </GoodsMeasure>
+            </ReferencedInvoiceLine>
+          </InvoiceLine>
+        </Commodity>
+        <GoodsMeasure>
+          <NetNetWeightMeasure>24300.0000</NetNetWeightMeasure>
+        </GoodsMeasure>
+        <GovernmentProcedure>
+          <CurrentCode>80000</CurrentCode>
+        </GovernmentProcedure>
+        <PreviousDocument>
+          <ID schemeID='token'>ID</ID>
+          <TypeCode>830</TypeCode>
+        </PreviousDocument>
+      </GovernmentAgencyGoodsItem>
+      <Importer>
+        <Name languageID=''></Name>
+        <Address>
+          <CountryCode>AF</CountryCode>
+          <Line languageID=''></Line>
+        </Address>
+      </Importer>
+      <Invoice>
+        <ID schemeID='token'>35180800831373000295550100000050871010173910</ID>
+        <TypeCode>388</TypeCode>
+        <ReferencedInvoice>
+          <ID schemeID='token'>35180700831373000295550090001030101426610668</ID>
+          <TypeCode>REM</TypeCode>
+          <Submitter>
+            <ID schemeID='token'>00831373000295</ID>
+          </Submitter>
+        </ReferencedInvoice>
+      </Invoice>
+      <TradeTerms>
+        <ConditionCode>FOB</ConditionCode>
+      </TradeTerms>
+    </GoodsShipment>
+    <UCR>
+      <TraderAssignedReferenceID>8BR008313731JUI0000066</TraderAssignedReferenceID>
+    </UCR>
+  </DeclarationNFe>
+</Declaration>

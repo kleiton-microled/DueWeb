@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<nfeProc xmlns="http://www.portalfiscal.inf.br/nfe" versao="4.00">
+  <NFe>
+    <infNFe versao="4.00" Id="NFe41200560498706039010550500001009541883423283">
+      <ide>
+        <cUF>41</cUF>
+        <cNF>88342328</cNF>
+        <natOp>VENDA DE PRODUCAO DO ESTABELECIMENTO</natOp>
+        <mod>55</mod>
+        <serie>50</serie>
+        <nNF>100954</nNF>
+        <dhEmi>2020-05-25T14:07:00-03:00</dhEmi>
+        <dhSaiEnt>2020-05-25T14:07:00-03:00</dhSaiEnt>
+        <tpNF>1</tpNF>
+        <idDest>3</idDest>
+        <cMunFG>4104907</cMunFG>
+        <tpImp>2</tpImp>
+        <tpEmis>1</tpEmis>
+        <cDV>3</cDV>
+        <tpAmb>1</tpAmb>
+        <finNFe>1</finNFe>
+        <indFinal>0</indFinal>
+        <indPres>9</indPres>
+        <procEmi>0</procEmi>
+        <verProc>Signature EDX</verProc>
+      </ide>
+      <emit>
+        <CNPJ>60498706039010</CNPJ>
+        <xNome>CARGILL AGRICOLA S A</xNome>
+        <xFant>CARGILL AGRICOLA S A CASTRO</xFant>
+        <enderEmit>
+          <xLgr>ROD PR 090 KM 115</xLgr>
+          <nro>S/N</nro>
+          <xBairro>DISTRITO INDUSTRIAL URBANO</xBairro>
+          <cMun>4104907</cMun>
+          <xMun>CASTRO</xMun>
+          <UF>PR</UF>
+          <CEP>84174150</CEP>
+          <cPais>1058</cPais>
+          <xPais>BRASIL</xPais>
+        </enderEmit>
+        <IE>9058814340</IE>
+        <CRT>3</CRT>
+      </emit>
+      <dest>
+        <idEstrangeiro>99999999</idEstrangeiro>
+        <xNome>MEELUNIE B V</xNome>
+        <enderDest>
+          <xLgr>VINOLY TOWER 18TH FLOOR</xLgr>
+          <nro>S/N</nro>
+          <xBairro>CLAUDE DEBUSSYLAAN 40</xBairro>
+          <cMun>9999999</cMun>
+          <xMun>EXTERIOR</xMun>
+          <UF>EX</UF>
+          <CEP>00001082</CEP>
+          <cPais>5738</cPais>
+          <xPais>NETHERLANDS (PAISES BAIXOS)</xPais>
+        </enderDest>
+        <indIEDest>9</indIEDest>
+      </dest>
+      <det nItem="1">
+        <prod>
+          <cProd>99055</cProd>
+          <cEAN>SEM GTIN</cEAN>
+          <xProd>AMILOGILL2100ALI EXP WINDMILL</xProd>
+          <NCM>11081200</NCM>
+          <cBenef>PR800002</cBenef>
+          <CFOP>7101</CFOP>
+          <uCom>SC</uCom>
+          <qCom>9.0000</qCom>
+          <vUnCom>43.952222222</vUnCom>
+          <vProd>395.57</vProd>
+          <cEANTrib>SEM GTIN</cEANTrib>
+          <uTrib>KG</uTrib>
+          <qTrib>225.0</qTrib>
+          <vUnTrib>1.7580888889</vUnTrib>
+          <indTot>1</indTot>
+        </prod>
+        <imposto>
+          <ICMS>
+            <ICMS40>
+              <orig>0</orig>
+              <CST>41</CST>
+              <vICMSDeson>15.82</vICMSDeson>
+              <motDesICMS>9</motDesICMS>
+            </ICMS40>
+          </ICMS>
+          <IPI>
+            <cEnq>999</cEnq>
+            <IPINT>
+              <CST>51</CST>
+            </IPINT>
+          </IPI>
+          <PIS>
+            <PISNT>
+              <CST>08</CST>
+            </PISNT>
+          </PIS>
+          <COFINS>
+            <COFINSNT>
+              <CST>08</CST>
+            </COFINSNT>
+          </COFINS>
+        </imposto>
+        <infAdProd>** UN Trib = KG; Qtde Trib = 225.0000; Vl Unit Trib = 1.7580888889  **</infAdProd>
+      </det>
+      <det nItem="2">
+        <prod>
+          <cProd>99055</cProd>
+          <cEAN>SEM GTIN</cEAN>
+          <xProd>AMILOGILL2100ALI EXP WINDMILL</xProd>
+          <NCM>11081200</NCM>
+          <cBenef>PR800002</cBenef>
+          <CFOP>7101</CFOP>
+          <uCom>SC</uCom>
+          <qCom>991.0000</qCom>
+          <vUnCom>43.948829465</vUnCom>
+          <vProd>43553.29</vProd>
+          <cEANTrib>SEM GTIN</cEANTrib>
+          <uTrib>KG</uTrib>
+          <qTrib>24775.0</qTrib>
+          <vUnTrib>1.7579531786</vUnTrib>
+          <indTot>1</indTot>
+        </prod>
+        <imposto>
+          <ICMS>
+            <ICMS40>
+              <orig>0</orig>
+              <CST>41</CST>
+              <vICMSDeson>1742.13</vICMSDeson>
+              <motDesICMS>9</motDesICMS>
+            </ICMS40>
+          </ICMS>
+          <IPI>
+            <cEnq>999</cEnq>
+            <IPINT>
+              <CST>51</CST>
+            </IPINT>
+          </IPI>
+          <PIS>
+            <PISNT>
+              <CST>08</CST>
+            </PISNT>
+          </PIS>
+          <COFINS>
+            <COFINSNT>
+              <CST>08</CST>
+            </COFINSNT>
+          </COFINS>
+        </imposto>
+        <infAdProd>** UN Trib = KG; Qtde Trib = 24775.0000; Vl Unit Trib = 1.7579531786  **</infAdProd>
+      </det>
+      <total>
+        <ICMSTot>
+          <vBC>0</vBC>
+          <vICMS>0.00</vICMS>
+          <vICMSDeson>1757.95</vICMSDeson>
+          <vFCP>0.00</vFCP>
+          <vBCST>0.00</vBCST>
+          <vST>0.00</vST>
+          <vFCPST>0.00</vFCPST>
+          <vFCPSTRet>0.00</vFCPSTRet>
+          <vProd>43948.86</vProd>
+          <vFrete>0</vFrete>
+          <vSeg>0</vSeg>
+          <vDesc>0</vDesc>
+          <vII>0.00</vII>
+          <vIPI>0.00</vIPI>
+          <vIPIDevol>0.00</vIPIDevol>
+          <vPIS>0.00</vPIS>
+          <vCOFINS>0.00</vCOFINS>
+          <vOutro>0.00</vOutro>
+          <vNF>43948.86</vNF>
+        </ICMSTot>
+      </total>
+      <transp>
+        <modFrete>0</modFrete>
+        <transporta>
+          <CNPJ>17686186000187</CNPJ>
+          <xNome>ARJ TRANSPORTES DE CARGAS LTDA</xNome>
+          <IE>9062515586</IE>
+          <xEnder>R ARTHUR BERNARDES              NSN</xEnder>
+          <xMun>PARANAGUA</xMun>
+          <UF>PR</UF>
+        </transporta>
+        <veicTransp>
+          <placa>BDB4J60</placa>
+          <UF>PR</UF>
+          <RNTC>046338916</RNTC>
+        </veicTransp>
+        <vol>
+          <qVol>9</qVol>
+          <nVol>00000041953001</nVol>
+          <pesoL>225.000</pesoL>
+          <pesoB>232.128</pesoB>
+        </vol>
+        <vol>
+          <qVol>991</qVol>
+          <nVol>00000042723001</nVol>
+          <pesoL>24775.000</pesoL>
+          <pesoB>25559.872</pesoB>
+        </vol>
+      </transp>
+      <cobr>
+        <fat>
+          <nFat>10095450</nFat>
+          <vOrig>43948.86</vOrig>
+          <vDesc>0.00</vDesc>
+          <vLiq>43948.86</vLiq>
+        </fat>
+      </cobr>
+      <pag>
+        <detPag>
+          <tPag>90</tPag>
+          <vPag>0.00</vPag>
+        </detPag>
+      </pag>
+      <infAdic>
+        <infCpl>S/PED: 81671                     NPED: 7785 - VX Vend: 37469207 Load: 19676881  NAO INCIDENCIA DO ICMS CFME ARTIGO 3 INCISO II DO DECRETO 6080/12 - RICMS-PR      container:temu7520210 lacre:hld9234035    Classif. Fiscal:  A - 11081200.24/06/20 -     RODRIGO LUIS DE ALMEIDA</infCpl>
+      </infAdic>
+      <exporta>
+        <UFSaidaPais>PR</UFSaidaPais>
+        <xLocExporta>ROD PR 090 KM 115               NSN  DISTRITO INDUSTRIAL URB</xLocExporta>
+      </exporta>
+      <compra>
+        <xPed>81671</xPed>
+      </compra>
+      <infRespTec>
+        <CNPJ>11643219000125</CNPJ>
+        <xContato>Horacio Menin</xContato>
+        <email>Suporte.br@gosocket.net</email>
+        <fone>1155552012</fone>
+      </infRespTec>
+    </infNFe>
+    <Signature xmlns="http://www.w3.org/2000/09/xmldsig#">
+      <SignedInfo>
+        <CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315" />
+        <SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1" />
+        <Reference URI="#NFe41200560498706039010550500001009541883423283">
+          <Transforms>
+            <Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" />
+            <Transform Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315" />
+          </Transforms>
+          <DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+          <DigestValue>MpVY/P2o2+nKDAQOnDjfkz+gntg=</DigestValue>
+        </Reference>
+      </SignedInfo>
+      <SignatureValue>IWzHZxcbW4iMRNN9BmaJM1NGIgC7QGA3QbIWgg4S7QLz+hOJx/73WgZD3mBNbcqYZihXKkKqXgno4b3KJsboLqSpnn8JD93qDA9b1V4SD0ZvGrsqRtJbgB99vct5wlmmAqrSRqIjwrT2VS9YSfbRRUUGjUq5E4R9S3kcoZblh0bnIO9t1hpfCm7KZlrHiBVjoKcjyQGf9odmcKiohxSRtULmrYxYHdjK3EGEVxs5qS0cZ4WMH3iqW5/PeMgpDkrW5q2ON5Zi8i6aX8EIZvqKUuqVfE5y/2NYRx6S0RV+FVlDKninNDUMH+/JHR9iEXb0m2WmDH8Jj6FHmtuIFt5p2g==</SignatureValue>
+      <KeyInfo>
+        <X509Data>
+          <X509Certificate>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</X509Certificate>
+        </X509Data>
+      </KeyInfo>
+    </Signature>
+  </NFe>
+  <protNFe versao="4.00">
+    <infProt>
+      <tpAmb>1</tpAmb>
+      <verAplic>PR-v4_6_2</verAplic>
+      <chNFe>41200560498706039010550500001009541883423283</chNFe>
+      <dhRecbto>2020-05-25T14:08:20-03:00</dhRecbto>
+      <nProt>141200091994523</nProt>
+      <digVal>MpVY/P2o2+nKDAQOnDjfkz+gntg=</digVal>
+      <cStat>100</cStat>
+      <xMotivo>Autorizado o uso da NF-e</xMotivo>
+    </infProt>
+  </protNFe>
+</nfeProc>

@@ -1,0 +1,9 @@
+﻿.progress {
+    text-align: center;
+}
+
+.progress-value {
+    position: absolute;
+    right: 0;
+    left: 0;
+}

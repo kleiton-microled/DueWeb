@@ -1,0 +1,788 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.7\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.7\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="..\..\packages\Microsoft.Net.Compilers.1.3.2\build\Microsoft.Net.Compilers.props" Condition="Exists('..\..\packages\Microsoft.Net.Compilers.1.3.2\build\Microsoft.Net.Compilers.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{22E5DDA0-C32E-4EEA-AE47-B3234B3BE8F8}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Cargill.DUE.Web</RootNamespace>
+    <AssemblyName>Cargill.DUE.Web</AssemblyName>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort>
+    </IISExpressSSLPort>
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Common.Logging, Version=2.1.1.0, Culture=neutral, PublicKeyToken=af08829b84f0328e, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Common.Logging.2.1.1\lib\net40\Common.Logging.dll</HintPath>
+    </Reference>
+    <Reference Include="Dapper, Version=1.50.5.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Dapper.1.50.5\lib\net451\Dapper.dll</HintPath>
+    </Reference>
+    <Reference Include="EPPlus">
+      <HintPath>..\..\..\..\ecoporto\Ecoporto .NET\Gerencial .NET\Gerencial\bin\Debug\EPPlus.dll</HintPath>
+    </Reference>
+    <Reference Include="FluentValidation, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7de548da2fbae0f0, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\FluentValidation.7.6.0\lib\net45\FluentValidation.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\NLog.4.6.8\lib\net45\NLog.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Primitives, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\System.ComponentModel.Primitives.4.3.0\lib\net45\System.ComponentModel.Primitives.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.IO.Compression" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Net.Http.WebRequest" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Caching" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Optimization, Version=1.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="AspNet.ScriptManager.bootstrap">
+      <HintPath>..\..\packages\AspNet.ScriptManager.bootstrap.3.0.0\lib\net45\AspNet.ScriptManager.bootstrap.dll</HintPath>
+    </Reference>
+    <Reference Include="AspNet.ScriptManager.jQuery">
+      <HintPath>..\..\packages\AspNet.ScriptManager.jQuery.1.10.2\lib\net45\AspNet.ScriptManager.jQuery.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ScriptManager.MSAjax">
+      <HintPath>..\..\packages\Microsoft.AspNet.ScriptManager.MSAjax.5.0.0\lib\net45\Microsoft.ScriptManager.MSAjax.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ScriptManager.WebForms">
+      <HintPath>..\..\packages\Microsoft.AspNet.ScriptManager.WebForms.5.0.0\lib\net45\Microsoft.ScriptManager.WebForms.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>..\..\packages\WebGrease.1.5.2\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>..\..\packages\Antlr.3.4.1.9004\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.FriendlyUrls">
+      <HintPath>..\..\packages\Microsoft.AspNet.FriendlyUrls.Core.1.0.2\lib\net45\Microsoft.AspNet.FriendlyUrls.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\..\packages\Newtonsoft.Json.6.0.4\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ApplicationInsights">
+      <HintPath>..\..\packages\Microsoft.ApplicationInsights.2.2.0\lib\net45\Microsoft.ApplicationInsights.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AI.Agent.Intercept">
+      <HintPath>..\..\packages\Microsoft.ApplicationInsights.Agent.Intercept.2.0.6\lib\net45\Microsoft.AI.Agent.Intercept.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AI.DependencyCollector">
+      <HintPath>..\..\packages\Microsoft.ApplicationInsights.DependencyCollector.2.2.0\lib\net45\Microsoft.AI.DependencyCollector.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AI.PerfCounterCollector">
+      <HintPath>..\..\packages\Microsoft.ApplicationInsights.PerfCounterCollector.2.2.0\lib\net45\Microsoft.AI.PerfCounterCollector.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AI.ServerTelemetryChannel">
+      <HintPath>..\..\packages\Microsoft.ApplicationInsights.WindowsServer.TelemetryChannel.2.2.0\lib\net45\Microsoft.AI.ServerTelemetryChannel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AI.WindowsServer">
+      <HintPath>..\..\packages\Microsoft.ApplicationInsights.WindowsServer.2.2.0\lib\net45\Microsoft.AI.WindowsServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AI.Web">
+      <HintPath>..\..\packages\Microsoft.ApplicationInsights.Web.2.2.0\lib\net45\Microsoft.AI.Web.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ArquivoXML.aspx" />
+    <Content Include="CadastrarNotas.aspx" />
+    <Content Include="CadastrarItensDUE.aspx" />
+    <Content Include="CadastrarDUE.aspx" />
+    <Content Include="Compartilhar.aspx" />
+    <Content Include="ConfirmaExclusaoDUE.aspx" />
+    <Content Include="ConsultaEstoquePosACDComNotasRemessa.aspx" />
+    <Content Include="ConsultarNFs_Banco.aspx" />
+    <Content Include="Content\imagens\btnCsv.png" />
+    <Content Include="Content\imagens\btnInstrucoes.png" />
+    <Content Include="Content\imagens\logo-menu.png" />
+    <Content Include="Content\imagens\logo.png" />
+    <Content Include="Content\imagens\SP_logo.png" />
+    <Content Include="RelatorioDUES.aspx" />
+    <Content Include="ConsultaEstoquePreACD_New.aspx" />
+    <Content Include="ConsultaEstoquePreACD.aspx" />
+    <Content Include="ConsultaEstoquePreACD_New2.aspx" />
+    <Content Include="ConsultaHistoricoAverbadas.aspx" />
+    <Content Include="ConsultaNotasRemessaPosACD.aspx" />
+    <Content Include="ConsultaEstoquePosACD.aspx" />
+    <Content Include="ConsultarDadosDUE.aspx" />
+    <Content Include="ConsultarDUESemVinculoNF.aspx" />
+    <Content Include="ConsultarNFs.aspx" />
+    <Content Include="Content\css\consultar-nf.css" />
+    <Content Include="Content\imagens\beta-tag.png" />
+    <Content Include="Content\imagens\btnExcel.png" />
+    <Content Include="Content\imagens\excel.png" />
+    <Content Include="Content\imagens\search.png" />
+    <Content Include="Content\imagens\seta.png" />
+    <Content Include="Content\js\xmlPrettify.js" />
+    <Content Include="Erro.aspx" />
+    <Content Include="ConsultaEstoquePreACD_OLD.aspx" />
+    <Content Include="ConsultarNFsDUE.aspx" />
+    <Content Include="favicon.ico" />
+    <Content Include="ImportarDUE.aspx" />
+    <Content Include="ResumoDUE.aspx" />
+    <Content Include="TrocarSenha.aspx" />
+    <Content Include="ListagemMemorando.aspx" />
+    <Content Include="ConsultarNotasFiscais.aspx" />
+    <Content Include="ConsultarDUE.aspx" />
+    <Content Include="ConsultarNotasReferenciadas.aspx" />
+    <Content Include="Content\css\bootstrap-theme.min.css" />
+    <Content Include="Content\css\bootstrap.min.css" />
+    <Content Include="Content\css\easy-autocomplete.min.css" />
+    <Content Include="Content\css\easy-autocomplete.themes.min.css" />
+    <Content Include="Content\css\fontawesome-all.css" />
+    <Content Include="Content\css\select2.css" />
+    <Content Include="Content\css\select2.min.css" />
+    <Content Include="Content\css\signup.css" />
+    <Content Include="Content\css\site.css" />
+    <Content Include="Content\css\smart_wizard.css" />
+    <Content Include="Content\css\smart_wizard_theme_dots.css" />
+    <Content Include="Content\fonts\fa-brands-400.svg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\fonts\fa-regular-400.svg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\fonts\fa-solid-900.svg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\fonts\glyphicons-halflings-regular.svg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\imagens\carregando1.gif" />
+    <Content Include="Content\imagens\check.png" />
+    <Content Include="Content\imagens\editar.gif" />
+    <Content Include="Content\imagens\excluir.png" />
+    <Content Include="Content\imagens\minus.png" />
+    <Content Include="Content\imagens\plus.png" />
+    <Content Include="Content\js\bootstrap.min.js" />
+    <Content Include="Content\js\jquery.easy-autocomplete.min.js" />
+    <Content Include="Content\js\jquery.mask.min.js" />
+    <Content Include="Content\js\jquery.min.js" />
+    <Content Include="Content\js\jquery.smartWizard.js" />
+    <Content Include="Content\js\jquery.smartWizard.min.js" />
+    <Content Include="Content\js\select2.min.js" />
+    <Content Include="Content\js\simulador.js" />
+    <Content Include="Content\js\site.js" />
+    <Content Include="Javascript.aspx" />
+    <Content Include="ImportarNFs.aspx" />
+    <Content Include="Default.aspx" />
+    <Content Include="Global.asax" />
+    <Content Include="ListaCertificados.aspx" />
+    <Content Include="RecuperarSenha.aspx" />
+    <Content Include="Login.aspx" />
+    <Content Include="Registrar.aspx" />
+    <Content Include="Sair.aspx" />
+    <Content Include="Scripts\WebForms\DetailsView.js" />
+    <Content Include="Scripts\WebForms\Focus.js" />
+    <Content Include="Scripts\WebForms\GridView.js" />
+    <Content Include="Scripts\WebForms\Menu.js" />
+    <Content Include="Scripts\WebForms\MenuStandards.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjax.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxApplicationServices.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxComponentModel.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxCore.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxGlobalization.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxHistory.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxNetwork.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxSerialization.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxTimer.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxWebForms.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxWebServices.js" />
+    <Content Include="Scripts\WebForms\SmartNav.js" />
+    <Content Include="Scripts\WebForms\TreeView.js" />
+    <Content Include="Scripts\WebForms\WebForms.js" />
+    <Content Include="Scripts\WebForms\WebParts.js" />
+    <Content Include="Scripts\WebForms\WebUIValidation.js" />
+    <Content Include="HabilitarUsuarios.aspx" />
+    <Content Include="Content\fonts\glyphicons-halflings-regular.eot">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\fonts\glyphicons-halflings-regular.ttf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\fonts\glyphicons-halflings-regular.woff">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\fonts\glyphicons-halflings-regular.woff2">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ValidarXmlDUE.aspx" />
+    <Content Include="Web References\ServicoSiscomex\DadosNotaPreACD1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </Content>
+    <Content Include="Web References\ServicoSiscomex\DueDadosCompletos1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </Content>
+    <Content Include="Web References\ServicoSiscomex\DueDadosResumidos1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </Content>
+    <Content Include="NLog.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Include="NLog.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\ServicoSiscomex\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <Content Include="Web References\ServicoSiscomex\RetornoSiscomex1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </Content>
+    <None Include="Web References\ServicoSiscomex\WsDUE.disco" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings1.Designer.cs</LastGenOutput>
+    </None>
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ArquivoXML.aspx.cs">
+      <DependentUpon>ArquivoXML.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ArquivoXML.aspx.designer.cs">
+      <DependentUpon>ArquivoXML.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CadastrarNotas.aspx.cs">
+      <DependentUpon>CadastrarNotas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CadastrarNotas.aspx.designer.cs">
+      <DependentUpon>CadastrarNotas.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CadastrarItensDUE.aspx.cs">
+      <DependentUpon>CadastrarItensDUE.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CadastrarItensDUE.aspx.designer.cs">
+      <DependentUpon>CadastrarItensDUE.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CadastrarDUE.aspx.cs">
+      <DependentUpon>CadastrarDUE.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CadastrarDUE.aspx.designer.cs">
+      <DependentUpon>CadastrarDUE.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Compartilhar.aspx.cs">
+      <DependentUpon>Compartilhar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Compartilhar.aspx.designer.cs">
+      <DependentUpon>Compartilhar.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Config\Banco.cs" />
+    <Compile Include="ConfirmaExclusaoDUE.aspx.cs">
+      <DependentUpon>ConfirmaExclusaoDUE.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ConfirmaExclusaoDUE.aspx.designer.cs">
+      <DependentUpon>ConfirmaExclusaoDUE.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ConsultaEstoquePosACDComNotasRemessa.aspx.cs">
+      <DependentUpon>ConsultaEstoquePosACDComNotasRemessa.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ConsultaEstoquePosACDComNotasRemessa.aspx.designer.cs">
+      <DependentUpon>ConsultaEstoquePosACDComNotasRemessa.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ConsultarNFs_Banco.aspx.cs">
+      <DependentUpon>ConsultarNFs_Banco.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ConsultarNFs_Banco.aspx.designer.cs">
+      <DependentUpon>ConsultarNFs_Banco.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DAO\RelatorioDUEsDAO.cs" />
+    <Compile Include="DTO\ConsCCTDadosDUE.cs" />
+    <Compile Include="DTO\StatusConsultaPreACD.cs" />
+    <Compile Include="Helpers\DateTimeHelpers.cs" />
+    <Compile Include="Helpers\RetryHelper.cs" />
+    <Compile Include="Models\DadosRelatorioDUE.cs" />
+    <Compile Include="Models\DUEItemDetalhesACNF.cs" />
+    <Compile Include="Models\FiltroConsultaPreACD.cs" />
+    <Compile Include="Models\NotaFiscalConsultaCCT.cs" />
+    <Compile Include="Models\PaisesDanfe.cs" />
+    <Compile Include="Models\ProdutoNfe.cs" />
+    <Compile Include="Properties\Settings1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="RelatorioDUES.aspx.cs">
+      <DependentUpon>RelatorioDUES.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RelatorioDUES.aspx.designer.cs">
+      <DependentUpon>RelatorioDUES.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ConsultaEstoquePreACD_New.aspx.cs">
+      <DependentUpon>ConsultaEstoquePreACD_New.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ConsultaEstoquePreACD_New.aspx.designer.cs">
+      <DependentUpon>ConsultaEstoquePreACD_New.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ConsultaEstoquePreACD.aspx.cs">
+      <DependentUpon>ConsultaEstoquePreACD.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ConsultaEstoquePreACD.aspx.designer.cs">
+      <DependentUpon>ConsultaEstoquePreACD.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ConsultaEstoquePreACD_New2.aspx.cs">
+      <DependentUpon>ConsultaEstoquePreACD_New2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ConsultaEstoquePreACD_New2.aspx.designer.cs">
+      <DependentUpon>ConsultaEstoquePreACD_New2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ConsultaHistoricoAverbadas.aspx.cs">
+      <DependentUpon>ConsultaHistoricoAverbadas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ConsultaHistoricoAverbadas.aspx.designer.cs">
+      <DependentUpon>ConsultaHistoricoAverbadas.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ConsultaNotasRemessaPosACD.aspx.cs">
+      <DependentUpon>ConsultaNotasRemessaPosACD.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ConsultaNotasRemessaPosACD.aspx.designer.cs">
+      <DependentUpon>ConsultaNotasRemessaPosACD.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ConsultaEstoquePosACD.aspx.cs">
+      <DependentUpon>ConsultaEstoquePosACD.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ConsultaEstoquePosACD.aspx.designer.cs">
+      <DependentUpon>ConsultaEstoquePosACD.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ConsultarDadosDUE.aspx.cs">
+      <DependentUpon>ConsultarDadosDUE.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ConsultarDadosDUE.aspx.designer.cs">
+      <DependentUpon>ConsultarDadosDUE.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ConsultarDUESemVinculoNF.aspx.cs">
+      <DependentUpon>ConsultarDUESemVinculoNF.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ConsultarDUESemVinculoNF.aspx.designer.cs">
+      <DependentUpon>ConsultarDUESemVinculoNF.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ConsultarNFs.aspx.cs">
+      <DependentUpon>ConsultarNFs.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ConsultarNFs.aspx.designer.cs">
+      <DependentUpon>ConsultarNFs.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DAO\CertificadoDAO.cs" />
+    <Compile Include="DAO\HistoricoAverbadosDAO.cs" />
+    <Compile Include="DAO\EstoquePosACDDAO.cs" />
+    <Compile Include="DAO\EstoqueDAO.cs" />
+    <Compile Include="DAO\EmpresaDAO.cs" />
+    <Compile Include="DAO\AtributosNCMDAO.cs" />
+    <Compile Include="DAO\SituacaoDUEDAO.cs" />
+    <Compile Include="DTO\NFRemessaPosACD.cs" />
+    <Compile Include="Erro.aspx.cs">
+      <DependentUpon>Erro.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Erro.aspx.designer.cs">
+      <DependentUpon>Erro.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ConsultaEstoquePreACD_OLD.aspx.cs">
+      <DependentUpon>ConsultaEstoquePreACD_OLD.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ConsultaEstoquePreACD_OLD.aspx.designer.cs">
+      <DependentUpon>ConsultaEstoquePreACD_OLD.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ConsultarNFsDUE.aspx.cs">
+      <DependentUpon>ConsultarNFsDUE.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ConsultarNFsDUE.aspx.designer.cs">
+      <DependentUpon>ConsultarNFsDUE.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Extensions\DoubleExtensions.cs" />
+    <Compile Include="Helpers\AsyncHelpers.cs" />
+    <Compile Include="ImportarDUE.aspx.cs">
+      <DependentUpon>ImportarDUE.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ImportarDUE.aspx.designer.cs">
+      <DependentUpon>ImportarDUE.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AtributoNCM.cs" />
+    <Compile Include="Models\ConsultaNfs.cs" />
+    <Compile Include="Models\DUEItemDetalhesLPCO.cs" />
+    <Compile Include="Models\DueItemNota.cs" />
+    <Compile Include="Models\EstoqueDetalhes.cs" />
+    <Compile Include="Models\Estoque.cs" />
+    <Compile Include="Models\EstoquePreACDPesos.cs" />
+    <Compile Include="Models\SituacaoDUE.cs" />
+    <Compile Include="Responses\DadosDUE.cs" />
+    <Compile Include="Responses\DadosNotaPreACD.cs" />
+    <Compile Include="Responses\DueDadosCompletos.cs" />
+    <Compile Include="Responses\DueDadosResumidos.cs" />
+    <Compile Include="Responses\ErroSiscomexResponse.cs" />
+    <Compile Include="Responses\RetornoXMLValidacao.cs" />
+    <Compile Include="Responses\ValidarXmlRetornoSiscomex.cs" />
+    <Compile Include="ResumoDUE.aspx.cs">
+      <DependentUpon>ResumoDUE.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ResumoDUE.aspx.designer.cs">
+      <DependentUpon>ResumoDUE.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RetificacaoSemServico\EnvioRetificacao.cs" />
+    <Compile Include="RetificacaoSemServico\RetornoSucesso.cs" />
+    <Compile Include="RetificacaoSemServico\SiscomexWarnings.cs" />
+    <Compile Include="RetificacaoSemServico\TimeoutHandler.cs" />
+    <Compile Include="Services\ServicoSiscomex2.cs" />
+    <Compile Include="Services\SisComexService.cs" />
+    <Compile Include="TrocarSenha.aspx.cs">
+      <DependentUpon>TrocarSenha.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TrocarSenha.aspx.designer.cs">
+      <DependentUpon>TrocarSenha.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DAO\ParametrosDAO.cs" />
+    <Compile Include="ListagemMemorando.aspx.cs">
+      <DependentUpon>ListagemMemorando.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ListagemMemorando.aspx.designer.cs">
+      <DependentUpon>ListagemMemorando.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ConsultarNotasFiscais.aspx.cs">
+      <DependentUpon>ConsultarNotasFiscais.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ConsultarNotasFiscais.aspx.designer.cs">
+      <DependentUpon>ConsultarNotasFiscais.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ConsultarDUE.aspx.cs">
+      <DependentUpon>ConsultarDUE.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ConsultarDUE.aspx.designer.cs">
+      <DependentUpon>ConsultarDUE.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ConsultarNotasReferenciadas.aspx.cs">
+      <DependentUpon>ConsultarNotasReferenciadas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ConsultarNotasReferenciadas.aspx.designer.cs">
+      <DependentUpon>ConsultarNotasReferenciadas.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DAO\DocumentoUnicoExportacaoDAO.cs" />
+    <Compile Include="DAO\EnquadramentosDAO.cs" />
+    <Compile Include="DAO\PaisesDAO.cs" />
+    <Compile Include="DTO\DUEItensVinculoDTO.cs" />
+    <Compile Include="Javascript.aspx.cs">
+      <DependentUpon>Javascript.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Javascript.aspx.designer.cs">
+      <DependentUpon>Javascript.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Parametros.cs" />
+    <Compile Include="RecuperarSenha.aspx.cs">
+      <DependentUpon>RecuperarSenha.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RecuperarSenha.aspx.designer.cs">
+      <DependentUpon>RecuperarSenha.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\DUEItemDetalhesAC.cs" />
+    <Compile Include="Models\Pais.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Services\EmailService.cs" />
+    <Compile Include="Services\LogsService.cs" />
+    <Compile Include="DAO\NotaFiscalDAO.cs" />
+    <Compile Include="DAO\MoedaDAO.cs" />
+    <Compile Include="DAO\RecintosDAO.cs" />
+    <Compile Include="DAO\UnidadesReceitaDAO.cs" />
+    <Compile Include="DTO\DUEItemDTO.cs" />
+    <Compile Include="DTO\DUEMasterDTO.cs" />
+    <Compile Include="Extensions\StringExtensions.cs" />
+    <Compile Include="Helpers\ValidacaoCNPJ.cs" />
+    <Compile Include="ImportarNFs.aspx.cs">
+      <DependentUpon>ImportarNFs.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ImportarNFs.aspx.designer.cs">
+      <DependentUpon>ImportarNFs.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DAO\UsuarioDAO.cs" />
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Helpers\Criptografia.cs" />
+    <Compile Include="Helpers\StringHelpers.cs" />
+    <Compile Include="Helpers\ValidacaoCPF.cs" />
+    <Compile Include="Helpers\ValidacaoEmail.cs" />
+    <Compile Include="ListaCertificados.aspx.cs">
+      <DependentUpon>ListaCertificados.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ListaCertificados.aspx.designer.cs">
+      <DependentUpon>ListaCertificados.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\DUEMaster.cs" />
+    <Compile Include="Models\DUEItemDetalhes.cs" />
+    <Compile Include="Models\DUEItem.cs" />
+    <Compile Include="Models\Exportador.cs" />
+    <Compile Include="Models\Importador.cs" />
+    <Compile Include="Models\UnidadeDespacho.cs" />
+    <Compile Include="Models\UnidadeEmbarque.cs" />
+    <Compile Include="Models\Enquadramento.cs" />
+    <Compile Include="Models\Moeda.cs" />
+    <Compile Include="Models\NotaFiscal.cs" />
+    <Compile Include="Models\Recinto.cs" />
+    <Compile Include="Models\UnidadeReceita.cs" />
+    <Compile Include="Models\Usuario.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Registrar.aspx.cs">
+      <DependentUpon>Registrar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Registrar.aspx.designer.cs">
+      <DependentUpon>Registrar.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Requests\RegistroDUE.cs" />
+    <Compile Include="Sair.aspx.cs">
+      <DependentUpon>Sair.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sair.aspx.designer.cs">
+      <DependentUpon>Sair.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Site.Master.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site.Master.designer.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+    </Compile>
+    <Compile Include="HabilitarUsuarios.aspx.cs">
+      <DependentUpon>HabilitarUsuarios.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HabilitarUsuarios.aspx.designer.cs">
+      <DependentUpon>HabilitarUsuarios.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ValidarXmlDUE.aspx.cs">
+      <DependentUpon>ValidarXmlDUE.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ValidarXmlDUE.aspx.designer.cs">
+      <DependentUpon>ValidarXmlDUE.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\ServicoSiscomex\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="XML\GerarXML.cs" />
+    <Compile Include="XML\ValidarXML.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Properties\PublishProfiles\" />
+    <Folder Include="Uploads\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\fonts\fa-brands-400.eot">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\fonts\fa-brands-400.ttf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\fonts\fa-brands-400.woff">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\fonts\fa-brands-400.woff2">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\fonts\fa-regular-400.eot">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\fonts\fa-regular-400.ttf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\fonts\fa-regular-400.woff">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\fonts\fa-regular-400.woff2">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\fonts\fa-solid-900.eot">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\fonts\fa-solid-900.ttf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\fonts\fa-solid-900.woff">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\fonts\fa-solid-900.woff2">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <None Include="packages.config" />
+    <Content Include="Site.Master" />
+    <None Include="Web References\ServicoSiscomex\WsDUE.wsdl" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferences Include="Web References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferenceUrl Include="https://www.microled.com.br/wssiscomex/wsdue.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\ServicoSiscomex\</RelPath>
+      <UpdateFromURL>https://www.microled.com.br/wssiscomex/wsdue.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>LouisDreyfus_DUE_Web_ServicoSiscomex_WsDUE</CachedSettingsPropName>
+    </WebReferenceUrl>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>51622</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:3832/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\..\packages\Microsoft.Net.Compilers.1.3.2\build\Microsoft.Net.Compilers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\..\packages\Microsoft.Net.Compilers.1.3.2\build\Microsoft.Net.Compilers.props'))" />
+    <Error Condition="!Exists('..\..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.7\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.7\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

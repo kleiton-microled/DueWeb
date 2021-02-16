@@ -1,0 +1,318 @@
+﻿html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    margin-bottom: 60px;
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 60px;
+    background-color: #424558;
+}
+
+body > .container-fluid {
+    padding: 64px 32px 0px 32px;
+}
+
+.container .text-muted {
+    margin: 20px 0;
+    color: #D3D3D3;
+}
+
+.footer > .container {
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+code {
+    font-size: 80%;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-left {
+    text-align: right;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.text-vertical-center {
+    vertical-align: middle;
+}
+
+input[type="text"]:focus {
+    background-color: #FAFAD2;
+}
+
+.table > tbody > tr > td {
+    vertical-align: middle;
+}
+
+.navbar-brand {
+    background-image: url('../imagens/logo-menu.png');
+    background-repeat: no-repeat;
+    width: 100px;
+    height: 38px;
+    padding: 0;
+    margin-top: 6px;
+    display: inline-block;
+}
+
+.destacar-texto {
+    font-weight: bold;
+    color: red;
+    background-color: #FFF68F;
+}
+
+.form-group {
+    margin-bottom: 6px;
+}
+
+    .form-group label {
+        margin-bottom: 3px;
+    }
+
+    .form-group hr {
+        margin-bottom: 4px;
+    }
+
+.no-gutter {
+    margin-right: 4px;
+    margin-left: 4px;
+}
+
+    .no-gutter > [class*="col-"] {
+        padding-right: 4px;
+        padding-left: 4px;
+    }
+
+.control-label {
+    font-size: 12px;
+}
+
+input[type=submit] {
+    font-size: 13px;
+    padding-left: 4px;
+    padding-right: 4px;
+}
+
+.navbar {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.navbar-custom {
+    background-color: #31556D;
+}
+
+.navbar-default .navbar-nav > li > a {
+    color: #D3D3D3;
+}
+
+    .navbar-default .navbar-nav > li > a:hover {
+        color: #D3D3D3;
+    }
+
+.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:focus, .navbar-default .navbar-nav > .active > a:hover {
+    background-color: #31556D;
+    color: #D3D3D3;
+}
+
+.navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:focus, .navbar-default .navbar-nav > .open > a:hover {
+    background-color: transparent;
+    color: #D3D3D3;
+}
+
+.dropdown-menu > .active > a, .dropdown-menu > .active > a:focus, .dropdown-menu > .active > a:hover {
+    color: #000000;
+}
+
+    .dropdown-menu > .active > a, .dropdown-menu > .active > a:focus, .dropdown-menu > .active > a:hover .panel-title {
+        background-color: #ffffff;
+    }
+
+        .dropdown-menu > .active > a, .dropdown-menu > .active > a:focus, .dropdown-menu > .active > a:hover {
+            background-color: #ffffff;
+        }
+
+.panel-body h4 {
+    padding-top: 10px;
+    color: gray;
+}
+
+.sw-btn-prev {
+    margin-right: 6px;
+}
+
+.invisivel {
+    display: none;
+}
+
+.updateModal {
+    position: fixed;
+    top: -22px;
+    left: -142px;
+    right: 0px; /* IE não le isso */
+    bottom: -22px; /* IE não le isso */
+    padding: 0px;
+    background-color: Gray;
+    filter: alpha(opacity=70);
+    opacity: 0.7;
+    overflow: auto;
+    z-index: 999;
+    /* Para o IE */
+    height: expression(document.body.clientHeight + "px");
+    width: expression(document.body.clientWidth + "px");
+}
+
+.updateModalBox {
+    padding: 4px;
+    background-color: #ffffff;
+    border: 1px solid #B2B2B2;
+    background-image: url('../imagens/carregando1.gif');
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-top: -35px;
+    margin-left: -100px;
+    height: 141px;
+    padding-top: 20px;
+    width: 290px;
+    border-radius: 8px;
+}
+
+.control-label {
+    white-space: nowrap;
+}
+
+.modal-xl {
+    width: 90%;
+    max-width: 1200px;
+}
+
+.modal-md {
+    width: 70%;
+    max-width: 800px;
+}
+
+.select2-results__options {
+    font-size: 11px !important;
+}
+
+.select2-selection__rendered {
+    padding-top: 2px;
+    font-size: 11px !important;
+}
+
+.pagination-ys {
+    /*display: inline-block;*/
+    padding-left: 0;
+    margin: 20px 0;
+    border-radius: 4px;
+}
+
+    .pagination-ys table > tbody > tr > td {
+        display: inline;
+    }
+
+        .pagination-ys table > tbody > tr > td > a,
+        .pagination-ys table > tbody > tr > td > span {
+            position: relative;
+            float: left;
+            padding: 8px 12px;
+            line-height: 1.42857143;
+            text-decoration: none;
+            color: #dd4814;
+            background-color: #ffffff;
+            border: 1px solid #dddddd;
+            margin-left: -1px;
+        }
+
+        .pagination-ys table > tbody > tr > td > span {
+            position: relative;
+            float: left;
+            padding: 8px 12px;
+            line-height: 1.42857143;
+            text-decoration: none;
+            margin-left: -1px;
+            z-index: 2;
+            color: #aea79f;
+            background-color: #f5f5f5;
+            border-color: #dddddd;
+            cursor: default;
+        }
+
+        .pagination-ys table > tbody > tr > td:first-child > a,
+        .pagination-ys table > tbody > tr > td:first-child > span {
+            margin-left: 0;
+            border-bottom-left-radius: 4px;
+            border-top-left-radius: 4px;
+        }
+
+        .pagination-ys table > tbody > tr > td:last-child > a,
+        .pagination-ys table > tbody > tr > td:last-child > span {
+            border-bottom-right-radius: 4px;
+            border-top-right-radius: 4px;
+        }
+
+        .pagination-ys table > tbody > tr > td > a:hover,
+        .pagination-ys table > tbody > tr > td > span:hover,
+        .pagination-ys table > tbody > tr > td > a:focus,
+        .pagination-ys table > tbody > tr > td > span:focus {
+            color: #97310e;
+            background-color: #eeeeee;
+            border-color: #dddddd;
+        }
+
+#tbAtosConcessorios {
+    font-size: 11px;
+}
+
+.form-control {
+    padding: 6px 6px !important;
+}
+
+.nav > li > a {
+    position: relative;
+    display: block;
+    padding: 20px 9px 20px 12px;
+}
+
+.navbar-header {
+    padding-top: 6px;
+}
+
+table .campo-acao {
+    width: 12px !important;
+    padding: 4px !important;
+}
+
+.input-100-p {
+    width: 100%;
+}
+
+.sem-margem{
+    margin:0px;
+}
+
+.borda-collapse {
+    border-collapse: collapse;
+}
+
+.border-bottom-zero{
+    border-bottom:0px;
+}
+
+.no-padding{
+    padding:0px !important;
+}
