@@ -34,23 +34,30 @@
                                     <h3 class="panel-title">Envio de Notas fiscais CCT.</h3>
                                 </div>
                                 <div class="panel-body">
-                                    <div class="row">
-                                        <div class="form-group">
-                                            <div class="col-md-10">
-                                                <label for="txtValorTotalNota" class="control-label">Arquivo:</label>
-                                                <asp:FileUpload ID="txtUpload" ClientIDMode="Static" runat="server" CssClass="btn btn-default" />
-                                                <p class="help-block">
-                                                    Clique no botão "Escolher arquivo" e selecione o arquivo .csv
-                                                </p>
-                                            </div>
-                                            <div class="col-md-2">
-                                                <div class="pull-right">
-                                                    <a href="Consulta_CCT.pdf" target="_blank">
-                                                        <img src="Content/imagens/btnInstrucoes.png" /></a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
+                                    <form id="form1" runat="server">  
+        <div>  
+            <div id="dvforgeneratingexcel">  
+                <div>  
+                    <asp:GridView ID="wdgList" runat="server" Height="410px" AutoGenerateColumns="False"  
+                        Style="width: 99.8%;">  
+                        <Columns>  
+                            <asp:BoundField DataField="ID" HeaderText="ID"></asp:BoundField>  
+                            <asp:BoundField DataField="Name" HeaderText="Name"></asp:BoundField>  
+                        </Columns>  
+  
+                    </asp:GridView>  
+                </div>  
+                <div class="pull-right">  
+                    <asp:Button runat="server" ID="btnExport" Text="Export" OnClick="btnExport_OnClick" />  
+                   </div>  
+            </div>  
+            <div id="dvforexcelimport">  
+                <asp:FileUpload Width="300" ID="FileUpload1" CssClass="form-control" runat="server" />  
+                <asp:Button ID="btn_import" runat="server" CssClass="btn btn-default" Text="Upload Excel sheet" OnClick="btn_import_Click" />  
+            </div>  
+  
+        </div>  
+    </form>  
 
 
 

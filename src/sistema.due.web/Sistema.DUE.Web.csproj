@@ -159,6 +159,7 @@
     <Content Include="Content\imagens\logo-menu.png" />
     <Content Include="Content\imagens\logo.png" />
     <Content Include="Content\imagens\SP_logo.png" />
+    <Content Include="EnviarNfeCCT.aspx" />
     <Content Include="RelatorioDUES.aspx" />
     <Content Include="ConsultaEstoquePreACD_New.aspx" />
     <Content Include="ConsultaEstoquePreACD.aspx" />
@@ -361,10 +362,18 @@
     <Compile Include="DAO\RelatorioDUEsDAO.cs" />
     <Compile Include="DTO\ConsCCTDadosDUE.cs" />
     <Compile Include="DTO\StatusConsultaPreACD.cs" />
+    <Compile Include="EnviarNfeCCT.aspx.cs">
+      <DependentUpon>EnviarNfeCCT.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EnviarNfeCCT.aspx.designer.cs">
+      <DependentUpon>EnviarNfeCCT.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Helpers\DateTimeHelpers.cs" />
     <Compile Include="Helpers\RetryHelper.cs" />
     <Compile Include="Models\DadosRelatorioDUE.cs" />
     <Compile Include="Models\DUEItemDetalhesACNF.cs" />
+    <Compile Include="Models\EnviaNotaCCT.cs" />
     <Compile Include="Models\FiltroConsultaPreACD.cs" />
     <Compile Include="Models\NotaFiscalConsultaCCT.cs" />
     <Compile Include="Models\PaisesDanfe.cs" />
